@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>A Flower For You 🌸</title>
+  <style>
+    /* Page */
+    html,body{height:100%;margin:0}
+    body{
+      display:grid;place-items:center;
+      background: radial-gradient(circle at 30% 20%, #fff7fb, #ffeef6 40%, #ffe2ef 70%, #ffd6ea 100%);
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans", sans-serif;
+    }
+    /* Card */
+    .card{
+      width:min(700px, 92vw);
+      padding:32px 28px;
+      background:#ffffffcc;
+      backdrop-filter: blur(6px);
+      border-radius:24px;
+      box-shadow: 0 10px 40px rgba(255,105,180,.25);
+      text-align:center;
+    }
+    h1{margin:0 0 6px 0;font-size:clamp(28px,5vw,40px)}
+    p.lead{margin:6px 0 20px 0;font-size:clamp(16px,3.5vw,18px)}
+    .garden{
+      font-size: clamp(22px, 5vw, 28px);
+      line-height: 1.6;
+      margin: 10px 0 20px;
+      user-select:none;
+    }
+    .flower{
+      display:inline-block;
+      animation: float 4s ease-in-out infinite;
+      padding:0 .12em;
+    }
+    .flower:nth-child(3n){animation-delay:.8s}
+    .flower:nth-child(4n){animation-delay:1.6s}
+    .flower:nth-child(5n){animation-delay:2.2s}
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(-10px)}
+    }
+    .note{
+      margin-top: 14px;
+      font-size: 15px;
+      color:#5b5560;
+    }
+    .btn{
+      display:inline-block;margin-top:18px;padding:10px 18px;border-radius:999px;
+      background:#ff7bb3;border:0;color:white;text-decoration:none;font-weight:600;
+      box-shadow: 0 6px 18px rgba(255,123,179,.35);
+    }
+    .btn:active{transform:translateY(1px)}
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-label="Flower card">
+    <h1>🌸 A Flower For You 🌸</h1>
+    <p class="lead">I made this tiny garden to brighten your day. Thank you for being you. 💖</p>
+
+    <div class="garden" aria-hidden="true">
+      <span class="flower">🌷</span><span class="flower">🌸</span><span class="flower">🌼</span>
+      <span class="flower">🌹</span><span class="flower">🌻</span><span class="flower">🌷</span>
+      <span class="flower">🌸</span><span class="flower">🌼</span><span class="flower">🌹</span>
+      <br/>
+      <span class="flower">🌻</span><span class="flower">🌷</span><span class="flower">🌸</span>
+      <span class="flower">🌼</span><span class="flower">🌹</span><span class="flower">🌻</span>
+      <span class="flower">🌷</span><span class="flower">🌸</span><span class="flower">🌼</span>
+    </div>
+
+    <a class="btn" href="#" onclick="alert('You are loved. 🌷'); return false;">Tap for a note</a>
+    <div class="note">Made with ❤️ on GitHub Pages</div>
+  </main>
+</body>
+</html>
